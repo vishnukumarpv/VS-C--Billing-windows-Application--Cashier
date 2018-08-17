@@ -29,6 +29,23 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.cancel = new System.Windows.Forms.Button();
+            this.save_button = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.clear = new System.Windows.Forms.Button();
+            this.n0 = new System.Windows.Forms.Button();
+            this.n9 = new System.Windows.Forms.Button();
+            this.n8 = new System.Windows.Forms.Button();
+            this.n7 = new System.Windows.Forms.Button();
+            this.n6 = new System.Windows.Forms.Button();
+            this.n5 = new System.Windows.Forms.Button();
+            this.n4 = new System.Windows.Forms.Button();
+            this.n3 = new System.Windows.Forms.Button();
+            this.n2 = new System.Windows.Forms.Button();
+            this.n1 = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.total_show = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.atm_panel = new System.Windows.Forms.Panel();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
@@ -45,21 +62,258 @@
             this.bal_cash = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.amount_cash = new System.Windows.Forms.TextBox();
-            this.total_show = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.atm_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.total_show);
+            this.panel1.Controls.Add(this.panel5);
+            this.panel1.Controls.Add(this.panel4);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(682, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(318, 529);
             this.panel1.TabIndex = 0;
+            // 
+            // panel5
+            // 
+            this.panel5.Controls.Add(this.cancel);
+            this.panel5.Controls.Add(this.save_button);
+            this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel5.Location = new System.Drawing.Point(0, 437);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(318, 100);
+            this.panel5.TabIndex = 3;
+            // 
+            // cancel
+            // 
+            this.cancel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cancel.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel.Image = global::the_billing_concept.Properties.Resources.Delete_Document_32px;
+            this.cancel.Location = new System.Drawing.Point(233, 13);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(51, 69);
+            this.cancel.TabIndex = 1;
+            this.cancel.UseVisualStyleBackColor = false;
+            // 
+            // save_button
+            // 
+            this.save_button.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(179)))), ((int)(((byte)(0)))));
+            this.save_button.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(179)))), ((int)(((byte)(0)))));
+            this.save_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.save_button.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.save_button.ForeColor = System.Drawing.Color.White;
+            this.save_button.Location = new System.Drawing.Point(34, 13);
+            this.save_button.Name = "save_button";
+            this.save_button.Size = new System.Drawing.Size(186, 69);
+            this.save_button.TabIndex = 0;
+            this.save_button.Text = "Save";
+            this.save_button.UseVisualStyleBackColor = false;
+            this.save_button.Click += new System.EventHandler(this.save_button_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.clear);
+            this.panel4.Controls.Add(this.n0);
+            this.panel4.Controls.Add(this.n9);
+            this.panel4.Controls.Add(this.n8);
+            this.panel4.Controls.Add(this.n7);
+            this.panel4.Controls.Add(this.n6);
+            this.panel4.Controls.Add(this.n5);
+            this.panel4.Controls.Add(this.n4);
+            this.panel4.Controls.Add(this.n3);
+            this.panel4.Controls.Add(this.n2);
+            this.panel4.Controls.Add(this.n1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 103);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(318, 334);
+            this.panel4.TabIndex = 2;
+            // 
+            // clear
+            // 
+            this.clear.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.clear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.clear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear.Location = new System.Drawing.Point(204, 251);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(80, 71);
+            this.clear.TabIndex = 9;
+            this.clear.Text = "C";
+            this.clear.UseVisualStyleBackColor = false;
+            this.clear.Click += new System.EventHandler(this.numberPad);
+            // 
+            // n0
+            // 
+            this.n0.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n0.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n0.Location = new System.Drawing.Point(31, 251);
+            this.n0.Name = "n0";
+            this.n0.Size = new System.Drawing.Size(80, 71);
+            this.n0.TabIndex = 8;
+            this.n0.Text = "0";
+            this.n0.UseVisualStyleBackColor = true;
+            this.n0.Click += new System.EventHandler(this.numberPad);
+            // 
+            // n9
+            // 
+            this.n9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n9.Location = new System.Drawing.Point(203, 174);
+            this.n9.Name = "n9";
+            this.n9.Size = new System.Drawing.Size(80, 71);
+            this.n9.TabIndex = 7;
+            this.n9.Text = "9";
+            this.n9.UseVisualStyleBackColor = true;
+            this.n9.Click += new System.EventHandler(this.numberPad);
+            // 
+            // n8
+            // 
+            this.n8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n8.Location = new System.Drawing.Point(117, 174);
+            this.n8.Name = "n8";
+            this.n8.Size = new System.Drawing.Size(80, 71);
+            this.n8.TabIndex = 6;
+            this.n8.Text = "8";
+            this.n8.UseVisualStyleBackColor = true;
+            this.n8.Click += new System.EventHandler(this.numberPad);
+            // 
+            // n7
+            // 
+            this.n7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n7.Location = new System.Drawing.Point(31, 174);
+            this.n7.Name = "n7";
+            this.n7.Size = new System.Drawing.Size(80, 71);
+            this.n7.TabIndex = 5;
+            this.n7.Text = "7";
+            this.n7.UseVisualStyleBackColor = true;
+            this.n7.Click += new System.EventHandler(this.numberPad);
+            // 
+            // n6
+            // 
+            this.n6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n6.Location = new System.Drawing.Point(203, 97);
+            this.n6.Name = "n6";
+            this.n6.Size = new System.Drawing.Size(80, 71);
+            this.n6.TabIndex = 4;
+            this.n6.Text = "6";
+            this.n6.UseVisualStyleBackColor = true;
+            this.n6.Click += new System.EventHandler(this.numberPad);
+            // 
+            // n5
+            // 
+            this.n5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n5.Location = new System.Drawing.Point(117, 97);
+            this.n5.Name = "n5";
+            this.n5.Size = new System.Drawing.Size(80, 71);
+            this.n5.TabIndex = 3;
+            this.n5.Text = "5";
+            this.n5.UseVisualStyleBackColor = true;
+            this.n5.Click += new System.EventHandler(this.numberPad);
+            // 
+            // n4
+            // 
+            this.n4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n4.Location = new System.Drawing.Point(31, 97);
+            this.n4.Name = "n4";
+            this.n4.Size = new System.Drawing.Size(80, 71);
+            this.n4.TabIndex = 2;
+            this.n4.Text = "4";
+            this.n4.UseVisualStyleBackColor = true;
+            this.n4.Click += new System.EventHandler(this.numberPad);
+            // 
+            // n3
+            // 
+            this.n3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n3.Location = new System.Drawing.Point(204, 19);
+            this.n3.Name = "n3";
+            this.n3.Size = new System.Drawing.Size(80, 71);
+            this.n3.TabIndex = 1;
+            this.n3.Text = "3";
+            this.n3.UseVisualStyleBackColor = true;
+            this.n3.Click += new System.EventHandler(this.numberPad);
+            // 
+            // n2
+            // 
+            this.n2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n2.Location = new System.Drawing.Point(118, 19);
+            this.n2.Name = "n2";
+            this.n2.Size = new System.Drawing.Size(80, 71);
+            this.n2.TabIndex = 1;
+            this.n2.Text = "2";
+            this.n2.UseVisualStyleBackColor = true;
+            this.n2.Click += new System.EventHandler(this.numberPad);
+            // 
+            // n1
+            // 
+            this.n1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n1.Location = new System.Drawing.Point(32, 19);
+            this.n1.Name = "n1";
+            this.n1.Size = new System.Drawing.Size(80, 71);
+            this.n1.TabIndex = 0;
+            this.n1.Text = "1";
+            this.n1.UseVisualStyleBackColor = true;
+            this.n1.Click += new System.EventHandler(this.numberPad);
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.total_show);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Location = new System.Drawing.Point(0, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(318, 103);
+            this.panel3.TabIndex = 0;
+            // 
+            // total_show
+            // 
+            this.total_show.AutoSize = true;
+            this.total_show.Font = new System.Drawing.Font("Elephant", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.total_show.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(179)))), ((int)(((byte)(0)))));
+            this.total_show.Location = new System.Drawing.Point(41, 16);
+            this.total_show.Name = "total_show";
+            this.total_show.Size = new System.Drawing.Size(242, 77);
+            this.total_show.TabIndex = 7;
+            this.total_show.Text = "$ 0.00";
             // 
             // panel2
             // 
@@ -140,6 +394,8 @@
             this.trans_ack_textBox.Name = "trans_ack_textBox";
             this.trans_ack_textBox.Size = new System.Drawing.Size(477, 30);
             this.trans_ack_textBox.TabIndex = 5;
+            this.trans_ack_textBox.Enter += new System.EventHandler(this.eTextBox);
+            this.trans_ack_textBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isDigit);
             // 
             // label5
             // 
@@ -157,6 +413,8 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(183, 34);
             this.textBox2.TabIndex = 3;
+            this.textBox2.Enter += new System.EventHandler(this.eTextBox);
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isDigit);
             // 
             // label4
             // 
@@ -174,6 +432,10 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(183, 34);
             this.textBox1.TabIndex = 1;
+            this.textBox1.Text = "0.00";
+            this.textBox1.TextChanged += new System.EventHandler(this.cashViaAtmTextChange);
+            this.textBox1.Enter += new System.EventHandler(this.eTextBox);
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isDigit);
             // 
             // label3
             // 
@@ -200,10 +462,13 @@
             // 
             // bal_cash
             // 
+            this.bal_cash.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.bal_cash.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bal_cash.ForeColor = System.Drawing.Color.Red;
             this.bal_cash.Location = new System.Drawing.Point(442, 63);
             this.bal_cash.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.bal_cash.Name = "bal_cash";
-            this.bal_cash.Size = new System.Drawing.Size(190, 30);
+            this.bal_cash.Size = new System.Drawing.Size(190, 31);
             this.bal_cash.TabIndex = 2;
             // 
             // label1
@@ -225,17 +490,24 @@
             this.amount_cash.Name = "amount_cash";
             this.amount_cash.Size = new System.Drawing.Size(190, 30);
             this.amount_cash.TabIndex = 0;
+            this.amount_cash.Text = "0.00";
+            this.amount_cash.TextChanged += new System.EventHandler(this.paymentKeyEntered);
+            this.amount_cash.Enter += new System.EventHandler(this.eTextBox);
+            this.amount_cash.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isDigit);
             // 
-            // total_show
+            // button1
             // 
-            this.total_show.AutoSize = true;
-            this.total_show.Font = new System.Drawing.Font("Elephant", 45F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.total_show.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(179)))), ((int)(((byte)(0)))));
-            this.total_show.Location = new System.Drawing.Point(42, 45);
-            this.total_show.Name = "total_show";
-            this.total_show.Size = new System.Drawing.Size(242, 77);
-            this.total_show.TabIndex = 6;
-            this.total_show.Text = "$ 0.00";
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(117, 251);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 71);
+            this.button1.TabIndex = 10;
+            this.button1.Text = ".";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.numberPad);
             // 
             // PayBillControl
             // 
@@ -249,7 +521,10 @@
             this.Name = "PayBillControl";
             this.Size = new System.Drawing.Size(1000, 529);
             this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.atm_panel.ResumeLayout(false);
@@ -277,6 +552,23 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox trans_ack_textBox;
         private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label total_show;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button clear;
+        private System.Windows.Forms.Button n0;
+        private System.Windows.Forms.Button n9;
+        private System.Windows.Forms.Button n8;
+        private System.Windows.Forms.Button n7;
+        private System.Windows.Forms.Button n6;
+        private System.Windows.Forms.Button n5;
+        private System.Windows.Forms.Button n4;
+        private System.Windows.Forms.Button n3;
+        private System.Windows.Forms.Button n2;
+        private System.Windows.Forms.Button n1;
+        private System.Windows.Forms.Panel panel5;
+        private System.Windows.Forms.Button cancel;
+        private System.Windows.Forms.Button save_button;
+        private System.Windows.Forms.Button button1;
     }
 }

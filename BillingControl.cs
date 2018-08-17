@@ -14,7 +14,7 @@ namespace the_billing_concept
         private TextBox focussed_tbox = null;
         private decimal bill_total = 0.00m;
         private decimal total_tax = 0.00m;
-       // private decimal total_rounded = 0.00m;
+        public bool billed { get; set; }
         private int items_count = 0;
         private string currency_ind = "$";
 
@@ -99,37 +99,7 @@ namespace the_billing_concept
 
             item_total_price = item.taxed_amount* item_qty; 
             items_count++;
-
- 
-            /*
-            _items.Add(
-                 new BillItemsData
-                {
-                    id = item.id,
-                    slno = items_count,
-                    Name = item.name,
-                    qty = item_qty,
-                    rate = item.amount,
-                    tax = Math.Round(item.tax_perc_amount, 2),
-                    total = Math.Round(item_total_price, 2)
-                }
-             );
-             */
-
-
-
-            /*
-            b_item.id = item.id;
-            b_item.slno = items_count;
-            b_item.Name = item.name;
-            b_item.qty = item_qty;
-            b_item.rate = item.amount;
-            b_item.tax = Math.Round(item.tax_perc_amount, 2);
-            b_item.total = Math.Round(item_total_price, 2);
-
-            _items.Add(b_item);
-            */
-
+              
          bills_datagrid.Rows.Add(
                     items_count,
                     item.id,
@@ -138,12 +108,6 @@ namespace the_billing_concept
                     Math.Round( item_total_price, 2 )
          );
 
-            //bills_datagrid.DataSource = empty_bils;
-
-
-            //_items = bills_datagrid.;
-            //bills_datagrid.DataSource = this._items; 
-            //bills_datagrid.DataSource = _items;
 
             total_tax = total_tax + (item.tax_perc_amount * item_qty);
 
@@ -151,19 +115,10 @@ namespace the_billing_concept
             bill_total = Math.Round(bill_total, 2);
             decimal[] total_dec = this.decimalProcess(bill_total);
 
-            
-
-            //total_rounded = total_dec[0];
-
-            total_show.Text = currency_ind+" " +total_dec[0].ToString();
+            bill_total = total_dec[0];
+            total_show.Text = currency_ind+" " + bill_total.ToString();
             rounded_show.Text = currency_ind+" " +total_dec[1].ToString();
             tax_show.Text = currency_ind+" " + total_tax.ToString();
- 
-
-
-
- 
-
 
         }
 
@@ -171,7 +126,11 @@ namespace the_billing_concept
         private void processBilling(object sender, EventArgs e)
         {
             int bill_id;
-
+            if (this.bill_total == 0 )
+            {
+                MessageBox.Show("Bill something");
+                return;
+            }
             PayBillsForm py = new PayBillsForm(this.bill_total);
             py.ShowDialog();
             return;
@@ -203,10 +162,7 @@ namespace the_billing_concept
                 bill_items._qty = (int)bills[i].Cells[3].Value;
                 bill_items._price = (decimal)bills[i].Cells[6].Value;
 
-                items.Add(bill_items);
-                
-
-               // Console.WriteLine("index "+i+" val "+ bills[i].Cells[1].Value);
+                items.Add(bill_items); 
             }
 
             bill_items.create(items);

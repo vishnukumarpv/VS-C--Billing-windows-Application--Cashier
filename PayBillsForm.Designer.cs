@@ -59,6 +59,11 @@
             // 
             // payBillControl1
             // 
+            this.payBillControl1._total = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
             this.payBillControl1.BackColor = System.Drawing.Color.White;
             this.payBillControl1.Font = new System.Drawing.Font("Century Gothic", 14F);
             this.payBillControl1.Location = new System.Drawing.Point(4, 10);

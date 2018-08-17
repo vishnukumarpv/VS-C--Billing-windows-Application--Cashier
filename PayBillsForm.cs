@@ -18,8 +18,10 @@ namespace the_billing_concept
 
         public PayBillsForm(decimal total_a)
         {
-            this.total_amount = total_a;
-            InitializeComponent(); 
+            this.total_amount = total_a; 
+            InitializeComponent();
+            
+
         }
 
         private void close_this_Click(object sender, EventArgs e)
@@ -29,8 +31,11 @@ namespace the_billing_concept
 
         private void payBillControl1_Load(object sender, EventArgs e)
         {
+             
             Console.WriteLine( sender.GetType());
-            (sender as PayBillControl)._total = this.total_amount; 
+            //(sender as PayBillControl)._total = this.total_amount; 
+            payBillControl1._total = this.total_amount;
+            payBillControl1.setTotal();
         }
     }
 }

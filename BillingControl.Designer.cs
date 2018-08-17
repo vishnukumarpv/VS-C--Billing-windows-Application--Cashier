@@ -33,35 +33,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel2 = new System.Windows.Forms.Panel();
             this.bills_datagrid = new System.Windows.Forms.DataGridView();
-            this.qty_textbox = new System.Windows.Forms.TextBox();
-            this.item_textbox = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.cancel_button = new System.Windows.Forms.Button();
-            this.pay_button = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.enter = new System.Windows.Forms.Button();
-            this.clear = new System.Windows.Forms.Button();
-            this.n0 = new System.Windows.Forms.Button();
-            this.n9 = new System.Windows.Forms.Button();
-            this.n8 = new System.Windows.Forms.Button();
-            this.n7 = new System.Windows.Forms.Button();
-            this.n6 = new System.Windows.Forms.Button();
-            this.n5 = new System.Windows.Forms.Button();
-            this.n4 = new System.Windows.Forms.Button();
-            this.n3 = new System.Windows.Forms.Button();
-            this.n2 = new System.Windows.Forms.Button();
-            this.n1 = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.rounded_show = new System.Windows.Forms.Label();
-            this.rounded = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.total_label = new System.Windows.Forms.Label();
-            this.tax_show = new System.Windows.Forms.Label();
-            this.tax_label = new System.Windows.Forms.Label();
-            this.total_show = new System.Windows.Forms.Label();
             this.slno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.name = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -70,12 +41,41 @@
             this.tax = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.total = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.action = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.qty_textbox = new System.Windows.Forms.TextBox();
+            this.item_textbox = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.cancel_button = new System.Windows.Forms.Button();
+            this.pay_button = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.rounded_show = new System.Windows.Forms.Label();
+            this.rounded = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.total_label = new System.Windows.Forms.Label();
+            this.tax_show = new System.Windows.Forms.Label();
+            this.tax_label = new System.Windows.Forms.Label();
+            this.total_show = new System.Windows.Forms.Label();
+            this.n1 = new System.Windows.Forms.Button();
+            this.n2 = new System.Windows.Forms.Button();
+            this.n3 = new System.Windows.Forms.Button();
+            this.n4 = new System.Windows.Forms.Button();
+            this.n5 = new System.Windows.Forms.Button();
+            this.n6 = new System.Windows.Forms.Button();
+            this.n7 = new System.Windows.Forms.Button();
+            this.n8 = new System.Windows.Forms.Button();
+            this.n9 = new System.Windows.Forms.Button();
+            this.n0 = new System.Windows.Forms.Button();
+            this.clear = new System.Windows.Forms.Button();
+            this.enter = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.bills_datagrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
@@ -133,6 +133,84 @@
             this.bills_datagrid.Size = new System.Drawing.Size(697, 507);
             this.bills_datagrid.TabIndex = 4;
             this.bills_datagrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.cellClicked);
+            // 
+            // slno
+            // 
+            this.slno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.slno.DataPropertyName = "slno";
+            this.slno.FillWeight = 7.604661F;
+            this.slno.Frozen = true;
+            this.slno.HeaderText = "Sl.No.";
+            this.slno.MinimumWidth = 50;
+            this.slno.Name = "slno";
+            this.slno.ReadOnly = true;
+            this.slno.Width = 57;
+            // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.id.DataPropertyName = "id";
+            this.id.HeaderText = "_ID";
+            this.id.MinimumWidth = 20;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.id.Visible = false;
+            this.id.Width = 20;
+            // 
+            // name
+            // 
+            this.name.DataPropertyName = "Name";
+            this.name.FillWeight = 523.8579F;
+            this.name.HeaderText = "Name";
+            this.name.MinimumWidth = 200;
+            this.name.Name = "name";
+            this.name.ReadOnly = true;
+            // 
+            // qty
+            // 
+            this.qty.DataPropertyName = "qty";
+            this.qty.FillWeight = 10.87901F;
+            this.qty.HeaderText = "Qty.";
+            this.qty.MinimumWidth = 50;
+            this.qty.Name = "qty";
+            this.qty.ReadOnly = true;
+            // 
+            // rate
+            // 
+            this.rate.DataPropertyName = "rate";
+            this.rate.FillWeight = 11.38174F;
+            this.rate.HeaderText = "Rate";
+            this.rate.MinimumWidth = 50;
+            this.rate.Name = "rate";
+            this.rate.ReadOnly = true;
+            // 
+            // tax
+            // 
+            this.tax.DataPropertyName = "tax";
+            this.tax.FillWeight = 33.97094F;
+            this.tax.HeaderText = "Tax";
+            this.tax.MinimumWidth = 50;
+            this.tax.Name = "tax";
+            this.tax.ReadOnly = true;
+            // 
+            // total
+            // 
+            this.total.DataPropertyName = "total";
+            this.total.FillWeight = 12.3058F;
+            this.total.HeaderText = "Total";
+            this.total.MinimumWidth = 50;
+            this.total.Name = "total";
+            this.total.ReadOnly = true;
+            // 
+            // action
+            // 
+            this.action.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.action.HeaderText = "Action";
+            this.action.MinimumWidth = 40;
+            this.action.Name = "action";
+            this.action.Text = "del";
             // 
             // qty_textbox
             // 
@@ -222,196 +300,6 @@
             this.pay_button.UseVisualStyleBackColor = false;
             this.pay_button.Click += new System.EventHandler(this.processBilling);
             // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.enter);
-            this.panel4.Controls.Add(this.clear);
-            this.panel4.Controls.Add(this.n0);
-            this.panel4.Controls.Add(this.n9);
-            this.panel4.Controls.Add(this.n8);
-            this.panel4.Controls.Add(this.n7);
-            this.panel4.Controls.Add(this.n6);
-            this.panel4.Controls.Add(this.n5);
-            this.panel4.Controls.Add(this.n4);
-            this.panel4.Controls.Add(this.n3);
-            this.panel4.Controls.Add(this.n2);
-            this.panel4.Controls.Add(this.n1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 174);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(315, 334);
-            this.panel4.TabIndex = 1;
-            // 
-            // enter
-            // 
-            this.enter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(230)))), ((int)(((byte)(132)))));
-            this.enter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(138)))), ((int)(((byte)(7)))));
-            this.enter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
-            this.enter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.enter.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.enter.Location = new System.Drawing.Point(204, 251);
-            this.enter.Name = "enter";
-            this.enter.Size = new System.Drawing.Size(80, 71);
-            this.enter.TabIndex = 10;
-            this.enter.Text = "E";
-            this.enter.UseVisualStyleBackColor = false;
-            this.enter.Click += new System.EventHandler(this.itemAddToBills);
-            // 
-            // clear
-            // 
-            this.clear.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.clear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
-            this.clear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
-            this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.clear.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.clear.Location = new System.Drawing.Point(117, 251);
-            this.clear.Name = "clear";
-            this.clear.Size = new System.Drawing.Size(80, 71);
-            this.clear.TabIndex = 9;
-            this.clear.Text = "C";
-            this.clear.UseVisualStyleBackColor = false;
-            this.clear.Click += new System.EventHandler(this.clearInput);
-            // 
-            // n0
-            // 
-            this.n0.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
-            this.n0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
-            this.n0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.n0.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n0.Location = new System.Drawing.Point(31, 251);
-            this.n0.Name = "n0";
-            this.n0.Size = new System.Drawing.Size(80, 71);
-            this.n0.TabIndex = 8;
-            this.n0.Text = "0";
-            this.n0.UseVisualStyleBackColor = true;
-            this.n0.Click += new System.EventHandler(this.numberpadPressed);
-            // 
-            // n9
-            // 
-            this.n9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
-            this.n9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
-            this.n9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.n9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n9.Location = new System.Drawing.Point(203, 174);
-            this.n9.Name = "n9";
-            this.n9.Size = new System.Drawing.Size(80, 71);
-            this.n9.TabIndex = 7;
-            this.n9.Text = "9";
-            this.n9.UseVisualStyleBackColor = true;
-            this.n9.Click += new System.EventHandler(this.numberpadPressed);
-            // 
-            // n8
-            // 
-            this.n8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
-            this.n8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
-            this.n8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.n8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n8.Location = new System.Drawing.Point(117, 174);
-            this.n8.Name = "n8";
-            this.n8.Size = new System.Drawing.Size(80, 71);
-            this.n8.TabIndex = 6;
-            this.n8.Text = "8";
-            this.n8.UseVisualStyleBackColor = true;
-            this.n8.Click += new System.EventHandler(this.numberpadPressed);
-            // 
-            // n7
-            // 
-            this.n7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
-            this.n7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
-            this.n7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.n7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n7.Location = new System.Drawing.Point(31, 174);
-            this.n7.Name = "n7";
-            this.n7.Size = new System.Drawing.Size(80, 71);
-            this.n7.TabIndex = 5;
-            this.n7.Text = "7";
-            this.n7.UseVisualStyleBackColor = true;
-            this.n7.Click += new System.EventHandler(this.numberpadPressed);
-            // 
-            // n6
-            // 
-            this.n6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
-            this.n6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
-            this.n6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.n6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n6.Location = new System.Drawing.Point(203, 97);
-            this.n6.Name = "n6";
-            this.n6.Size = new System.Drawing.Size(80, 71);
-            this.n6.TabIndex = 4;
-            this.n6.Text = "6";
-            this.n6.UseVisualStyleBackColor = true;
-            this.n6.Click += new System.EventHandler(this.numberpadPressed);
-            // 
-            // n5
-            // 
-            this.n5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
-            this.n5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
-            this.n5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.n5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n5.Location = new System.Drawing.Point(117, 97);
-            this.n5.Name = "n5";
-            this.n5.Size = new System.Drawing.Size(80, 71);
-            this.n5.TabIndex = 3;
-            this.n5.Text = "5";
-            this.n5.UseVisualStyleBackColor = true;
-            this.n5.Click += new System.EventHandler(this.numberpadPressed);
-            // 
-            // n4
-            // 
-            this.n4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
-            this.n4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
-            this.n4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.n4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n4.Location = new System.Drawing.Point(31, 97);
-            this.n4.Name = "n4";
-            this.n4.Size = new System.Drawing.Size(80, 71);
-            this.n4.TabIndex = 2;
-            this.n4.Text = "4";
-            this.n4.UseVisualStyleBackColor = true;
-            this.n4.Click += new System.EventHandler(this.numberpadPressed);
-            // 
-            // n3
-            // 
-            this.n3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
-            this.n3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
-            this.n3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.n3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n3.Location = new System.Drawing.Point(204, 19);
-            this.n3.Name = "n3";
-            this.n3.Size = new System.Drawing.Size(80, 71);
-            this.n3.TabIndex = 1;
-            this.n3.Text = "3";
-            this.n3.UseVisualStyleBackColor = true;
-            this.n3.Click += new System.EventHandler(this.numberpadPressed);
-            // 
-            // n2
-            // 
-            this.n2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
-            this.n2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
-            this.n2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.n2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n2.Location = new System.Drawing.Point(118, 19);
-            this.n2.Name = "n2";
-            this.n2.Size = new System.Drawing.Size(80, 71);
-            this.n2.TabIndex = 1;
-            this.n2.Text = "2";
-            this.n2.UseVisualStyleBackColor = true;
-            this.n2.Click += new System.EventHandler(this.numberpadPressed);
-            // 
-            // n1
-            // 
-            this.n1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
-            this.n1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
-            this.n1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.n1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.n1.Location = new System.Drawing.Point(32, 19);
-            this.n1.Name = "n1";
-            this.n1.Size = new System.Drawing.Size(80, 71);
-            this.n1.TabIndex = 0;
-            this.n1.Text = "1";
-            this.n1.UseVisualStyleBackColor = true;
-            this.n1.Click += new System.EventHandler(this.numberpadPressed);
-            // 
             // panel3
             // 
             this.panel3.Controls.Add(this.rounded_show);
@@ -498,83 +386,195 @@
             this.total_show.TabIndex = 5;
             this.total_show.Text = "$ 0.00";
             // 
-            // slno
+            // n1
             // 
-            this.slno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.slno.DataPropertyName = "slno";
-            this.slno.FillWeight = 7.604661F;
-            this.slno.Frozen = true;
-            this.slno.HeaderText = "Sl.No.";
-            this.slno.MinimumWidth = 50;
-            this.slno.Name = "slno";
-            this.slno.ReadOnly = true;
-            this.slno.Width = 57;
+            this.n1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n1.Location = new System.Drawing.Point(32, 19);
+            this.n1.Name = "n1";
+            this.n1.Size = new System.Drawing.Size(80, 71);
+            this.n1.TabIndex = 0;
+            this.n1.Text = "1";
+            this.n1.UseVisualStyleBackColor = true;
+            this.n1.Click += new System.EventHandler(this.numberpadPressed);
             // 
-            // id
+            // n2
             // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.id.DataPropertyName = "id";
-            this.id.HeaderText = "_ID";
-            this.id.MinimumWidth = 20;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.id.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.id.Visible = false;
-            this.id.Width = 20;
+            this.n2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n2.Location = new System.Drawing.Point(118, 19);
+            this.n2.Name = "n2";
+            this.n2.Size = new System.Drawing.Size(80, 71);
+            this.n2.TabIndex = 1;
+            this.n2.Text = "2";
+            this.n2.UseVisualStyleBackColor = true;
+            this.n2.Click += new System.EventHandler(this.numberpadPressed);
             // 
-            // name
+            // n3
             // 
-            this.name.DataPropertyName = "Name";
-            this.name.FillWeight = 523.8579F;
-            this.name.HeaderText = "Name";
-            this.name.MinimumWidth = 200;
-            this.name.Name = "name";
-            this.name.ReadOnly = true;
+            this.n3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n3.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n3.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n3.Location = new System.Drawing.Point(204, 19);
+            this.n3.Name = "n3";
+            this.n3.Size = new System.Drawing.Size(80, 71);
+            this.n3.TabIndex = 1;
+            this.n3.Text = "3";
+            this.n3.UseVisualStyleBackColor = true;
+            this.n3.Click += new System.EventHandler(this.numberpadPressed);
             // 
-            // qty
+            // n4
             // 
-            this.qty.DataPropertyName = "qty";
-            this.qty.FillWeight = 10.87901F;
-            this.qty.HeaderText = "Qty.";
-            this.qty.MinimumWidth = 50;
-            this.qty.Name = "qty";
-            this.qty.ReadOnly = true;
+            this.n4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n4.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n4.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n4.Location = new System.Drawing.Point(31, 97);
+            this.n4.Name = "n4";
+            this.n4.Size = new System.Drawing.Size(80, 71);
+            this.n4.TabIndex = 2;
+            this.n4.Text = "4";
+            this.n4.UseVisualStyleBackColor = true;
+            this.n4.Click += new System.EventHandler(this.numberpadPressed);
             // 
-            // rate
+            // n5
             // 
-            this.rate.DataPropertyName = "rate";
-            this.rate.FillWeight = 11.38174F;
-            this.rate.HeaderText = "Rate";
-            this.rate.MinimumWidth = 50;
-            this.rate.Name = "rate";
-            this.rate.ReadOnly = true;
+            this.n5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n5.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n5.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n5.Location = new System.Drawing.Point(117, 97);
+            this.n5.Name = "n5";
+            this.n5.Size = new System.Drawing.Size(80, 71);
+            this.n5.TabIndex = 3;
+            this.n5.Text = "5";
+            this.n5.UseVisualStyleBackColor = true;
+            this.n5.Click += new System.EventHandler(this.numberpadPressed);
             // 
-            // tax
+            // n6
             // 
-            this.tax.DataPropertyName = "tax";
-            this.tax.FillWeight = 33.97094F;
-            this.tax.HeaderText = "Tax";
-            this.tax.MinimumWidth = 50;
-            this.tax.Name = "tax";
-            this.tax.ReadOnly = true;
+            this.n6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n6.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n6.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n6.Location = new System.Drawing.Point(203, 97);
+            this.n6.Name = "n6";
+            this.n6.Size = new System.Drawing.Size(80, 71);
+            this.n6.TabIndex = 4;
+            this.n6.Text = "6";
+            this.n6.UseVisualStyleBackColor = true;
+            this.n6.Click += new System.EventHandler(this.numberpadPressed);
             // 
-            // total
+            // n7
             // 
-            this.total.DataPropertyName = "total";
-            this.total.FillWeight = 12.3058F;
-            this.total.HeaderText = "Total";
-            this.total.MinimumWidth = 50;
-            this.total.Name = "total";
-            this.total.ReadOnly = true;
+            this.n7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n7.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n7.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n7.Location = new System.Drawing.Point(31, 174);
+            this.n7.Name = "n7";
+            this.n7.Size = new System.Drawing.Size(80, 71);
+            this.n7.TabIndex = 5;
+            this.n7.Text = "7";
+            this.n7.UseVisualStyleBackColor = true;
+            this.n7.Click += new System.EventHandler(this.numberpadPressed);
             // 
-            // action
+            // n8
             // 
-            this.action.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.action.HeaderText = "Action";
-            this.action.MinimumWidth = 40;
-            this.action.Name = "action";
-            this.action.Text = "del";
+            this.n8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n8.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n8.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n8.Location = new System.Drawing.Point(117, 174);
+            this.n8.Name = "n8";
+            this.n8.Size = new System.Drawing.Size(80, 71);
+            this.n8.TabIndex = 6;
+            this.n8.Text = "8";
+            this.n8.UseVisualStyleBackColor = true;
+            this.n8.Click += new System.EventHandler(this.numberpadPressed);
+            // 
+            // n9
+            // 
+            this.n9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n9.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n9.Location = new System.Drawing.Point(203, 174);
+            this.n9.Name = "n9";
+            this.n9.Size = new System.Drawing.Size(80, 71);
+            this.n9.TabIndex = 7;
+            this.n9.Text = "9";
+            this.n9.UseVisualStyleBackColor = true;
+            this.n9.Click += new System.EventHandler(this.numberpadPressed);
+            // 
+            // n0
+            // 
+            this.n0.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.n0.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.n0.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.n0.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.n0.Location = new System.Drawing.Point(31, 251);
+            this.n0.Name = "n0";
+            this.n0.Size = new System.Drawing.Size(80, 71);
+            this.n0.TabIndex = 8;
+            this.n0.Text = "0";
+            this.n0.UseVisualStyleBackColor = true;
+            this.n0.Click += new System.EventHandler(this.numberpadPressed);
+            // 
+            // clear
+            // 
+            this.clear.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.clear.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.clear.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.clear.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.clear.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clear.Location = new System.Drawing.Point(117, 251);
+            this.clear.Name = "clear";
+            this.clear.Size = new System.Drawing.Size(80, 71);
+            this.clear.TabIndex = 9;
+            this.clear.Text = "C";
+            this.clear.UseVisualStyleBackColor = false;
+            this.clear.Click += new System.EventHandler(this.clearInput);
+            // 
+            // enter
+            // 
+            this.enter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(181)))), ((int)(((byte)(230)))), ((int)(((byte)(132)))));
+            this.enter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(37)))), ((int)(((byte)(138)))), ((int)(((byte)(7)))));
+            this.enter.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.enter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.enter.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.enter.Location = new System.Drawing.Point(204, 251);
+            this.enter.Name = "enter";
+            this.enter.Size = new System.Drawing.Size(80, 71);
+            this.enter.TabIndex = 10;
+            this.enter.Text = "E";
+            this.enter.UseVisualStyleBackColor = false;
+            this.enter.Click += new System.EventHandler(this.itemAddToBills);
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.enter);
+            this.panel4.Controls.Add(this.clear);
+            this.panel4.Controls.Add(this.n0);
+            this.panel4.Controls.Add(this.n9);
+            this.panel4.Controls.Add(this.n8);
+            this.panel4.Controls.Add(this.n7);
+            this.panel4.Controls.Add(this.n6);
+            this.panel4.Controls.Add(this.n5);
+            this.panel4.Controls.Add(this.n4);
+            this.panel4.Controls.Add(this.n3);
+            this.panel4.Controls.Add(this.n2);
+            this.panel4.Controls.Add(this.n1);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 174);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(315, 334);
+            this.panel4.TabIndex = 1;
             // 
             // BillingControl
             // 
@@ -592,9 +592,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.bills_datagrid)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -602,28 +602,15 @@
         #endregion
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label total_label;
         private System.Windows.Forms.Label tax_show;
         private System.Windows.Forms.Label tax_label;
         private System.Windows.Forms.Label total_show;
-        private System.Windows.Forms.Button n1;
-        private System.Windows.Forms.Button clear;
-        private System.Windows.Forms.Button n0;
-        private System.Windows.Forms.Button n9;
-        private System.Windows.Forms.Button n8;
-        private System.Windows.Forms.Button n7;
-        private System.Windows.Forms.Button n6;
-        private System.Windows.Forms.Button n5;
-        private System.Windows.Forms.Button n4;
-        private System.Windows.Forms.Button n3;
-        private System.Windows.Forms.Button n2;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button cancel_button;
         private System.Windows.Forms.Button pay_button;
-        private System.Windows.Forms.Button enter;
         private System.Windows.Forms.DataGridView bills_datagrid;
         private System.Windows.Forms.TextBox qty_textbox;
         private System.Windows.Forms.TextBox item_textbox;
@@ -639,5 +626,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn tax;
         private System.Windows.Forms.DataGridViewTextBoxColumn total;
         private System.Windows.Forms.DataGridViewButtonColumn action;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button enter;
+        private System.Windows.Forms.Button clear;
+        private System.Windows.Forms.Button n0;
+        private System.Windows.Forms.Button n9;
+        private System.Windows.Forms.Button n8;
+        private System.Windows.Forms.Button n7;
+        private System.Windows.Forms.Button n6;
+        private System.Windows.Forms.Button n5;
+        private System.Windows.Forms.Button n4;
+        private System.Windows.Forms.Button n3;
+        private System.Windows.Forms.Button n2;
+        private System.Windows.Forms.Button n1;
     }
 }

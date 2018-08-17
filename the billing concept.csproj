@@ -185,5 +185,8 @@
   <ItemGroup>
     <None Include="Resources\Close Window_32px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Delete Document_32px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

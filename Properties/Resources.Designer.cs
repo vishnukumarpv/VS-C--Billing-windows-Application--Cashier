@@ -123,6 +123,16 @@ namespace the_billing_concept.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Delete_Document_32px {
+            get {
+                object obj = ResourceManager.GetObject("Delete Document_32px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_Settings_32px_2x {
             get {
                 object obj = ResourceManager.GetObject("icons8_Settings_32px@2x", resourceCulture);
