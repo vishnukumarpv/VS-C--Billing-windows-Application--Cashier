@@ -30,9 +30,9 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.cancel = new System.Windows.Forms.Button();
             this.save_button = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.clear = new System.Windows.Forms.Button();
             this.n0 = new System.Windows.Forms.Button();
             this.n9 = new System.Windows.Forms.Button();
@@ -59,10 +59,10 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.bal_cash = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.amount_cash = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.bal_label = new System.Windows.Forms.Label();
+            this.cancel = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -92,18 +92,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(318, 100);
             this.panel5.TabIndex = 3;
-            // 
-            // cancel
-            // 
-            this.cancel.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.cancel.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
-            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.cancel.Image = global::the_billing_concept.Properties.Resources.Delete_Document_32px;
-            this.cancel.Location = new System.Drawing.Point(233, 13);
-            this.cancel.Name = "cancel";
-            this.cancel.Size = new System.Drawing.Size(51, 69);
-            this.cancel.TabIndex = 1;
-            this.cancel.UseVisualStyleBackColor = false;
             // 
             // save_button
             // 
@@ -139,6 +127,20 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(318, 334);
             this.panel4.TabIndex = 2;
+            // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(117, 251);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(80, 71);
+            this.button1.TabIndex = 10;
+            this.button1.Text = ".";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.numberPad);
             // 
             // clear
             // 
@@ -317,9 +319,9 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.bal_label);
             this.panel2.Controls.Add(this.atm_panel);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Controls.Add(this.bal_cash);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.amount_cash);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -460,17 +462,6 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "Balance ";
             // 
-            // bal_cash
-            // 
-            this.bal_cash.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.bal_cash.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bal_cash.ForeColor = System.Drawing.Color.Red;
-            this.bal_cash.Location = new System.Drawing.Point(442, 63);
-            this.bal_cash.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.bal_cash.Name = "bal_cash";
-            this.bal_cash.Size = new System.Drawing.Size(190, 31);
-            this.bal_cash.TabIndex = 2;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -495,19 +486,31 @@
             this.amount_cash.Enter += new System.EventHandler(this.eTextBox);
             this.amount_cash.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.isDigit);
             // 
-            // button1
+            // bal_label
             // 
-            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(62)))), ((int)(((byte)(4)))));
-            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(212)))), ((int)(((byte)(199)))));
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(117, 251);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 71);
-            this.button1.TabIndex = 10;
-            this.button1.Text = ".";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.numberPad);
+            this.bal_label.AutoSize = true;
+            this.bal_label.BackColor = System.Drawing.Color.LavenderBlush;
+            this.bal_label.Font = new System.Drawing.Font("Century Gothic", 14F);
+            this.bal_label.Location = new System.Drawing.Point(440, 63);
+            this.bal_label.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.bal_label.Name = "bal_label";
+            this.bal_label.Padding = new System.Windows.Forms.Padding(5);
+            this.bal_label.Size = new System.Drawing.Size(101, 32);
+            this.bal_label.TabIndex = 5;
+            this.bal_label.Text = "Balance ";
+            // 
+            // cancel
+            // 
+            this.cancel.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.cancel.FlatAppearance.BorderColor = System.Drawing.Color.Silver;
+            this.cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancel.Image = global::the_billing_concept.Properties.Resources.Delete_Document_32px;
+            this.cancel.Location = new System.Drawing.Point(233, 13);
+            this.cancel.Name = "cancel";
+            this.cancel.Size = new System.Drawing.Size(51, 69);
+            this.cancel.TabIndex = 1;
+            this.cancel.UseVisualStyleBackColor = false;
+            this.cancel.Click += new System.EventHandler(this.cancel_Click);
             // 
             // PayBillControl
             // 
@@ -546,7 +549,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox bal_cash;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
@@ -570,5 +572,6 @@
         private System.Windows.Forms.Button cancel;
         private System.Windows.Forms.Button save_button;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label bal_label;
     }
 }

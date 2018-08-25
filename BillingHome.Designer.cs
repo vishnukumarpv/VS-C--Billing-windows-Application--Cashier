@@ -33,20 +33,24 @@
             this.sliding_panel = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
             this.price_check_btn = new System.Windows.Forms.Button();
-            this.billing_btn = new System.Windows.Forms.Button();
             this.compony_logo = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.dateTime = new System.Windows.Forms.Label();
+            this.billingControl = new the_billing_concept.BillingControl();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.close = new System.Windows.Forms.Button();
-            this.billingControl = new the_billing_concept.BillingControl();
-            this.priceCheck = new the_billing_concept.PriceCheck();
+            this.button1 = new System.Windows.Forms.Button();
+            this.print_last = new System.Windows.Forms.Button();
+            this.billing_btn = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.priceCheck1 = new the_billing_concept.PriceCheck();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel2
@@ -62,6 +66,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(61)))), ((int)(((byte)(126)))));
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.sliding_panel);
             this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.price_check_btn);
@@ -114,26 +119,6 @@
             this.price_check_btn.UseVisualStyleBackColor = true;
             this.price_check_btn.Click += new System.EventHandler(this.price_check_Click);
             // 
-            // billing_btn
-            // 
-            this.billing_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(61)))), ((int)(((byte)(126)))));
-            this.billing_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.billing_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(61)))), ((int)(((byte)(126)))));
-            this.billing_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.billing_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.billing_btn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billing_btn.ForeColor = System.Drawing.Color.White;
-            this.billing_btn.Image = global::the_billing_concept.Properties.Resources.Bill_32px;
-            this.billing_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.billing_btn.Location = new System.Drawing.Point(6, 204);
-            this.billing_btn.Margin = new System.Windows.Forms.Padding(4);
-            this.billing_btn.Name = "billing_btn";
-            this.billing_btn.Size = new System.Drawing.Size(234, 86);
-            this.billing_btn.TabIndex = 2;
-            this.billing_btn.Text = "Billing";
-            this.billing_btn.UseVisualStyleBackColor = false;
-            this.billing_btn.Click += new System.EventHandler(this.billing_Click);
-            // 
             // compony_logo
             // 
             this.compony_logo.AutoSize = true;
@@ -147,16 +132,6 @@
             this.compony_logo.TabIndex = 2;
             this.compony_logo.Text = "ABCD company";
             this.compony_logo.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::the_billing_concept.Properties.Resources.social_1_logo_buysellads_2x;
-            this.pictureBox1.Location = new System.Drawing.Point(76, 43);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(93, 99);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
             // 
             // panel3
             // 
@@ -192,6 +167,27 @@
             this.dateTime.TabIndex = 22;
             this.dateTime.Text = "29-07-2018 05:52 AM";
             // 
+            // billingControl
+            // 
+            this.billingControl.BackColor = System.Drawing.Color.White;
+            this.billingControl.billed = false;
+            this.billingControl.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billingControl.Location = new System.Drawing.Point(242, 80);
+            this.billingControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.billingControl.Name = "billingControl";
+            this.billingControl.Size = new System.Drawing.Size(1129, 672);
+            this.billingControl.TabIndex = 2;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.button1);
+            this.panel4.Controls.Add(this.print_last);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 636);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(241, 113);
+            this.panel4.TabIndex = 6;
+            // 
             // button3
             // 
             this.button3.AccessibleDescription = "";
@@ -220,25 +216,71 @@
             this.close.UseVisualStyleBackColor = true;
             this.close.Click += new System.EventHandler(this.close_window);
             // 
-            // billingControl
+            // button1
             // 
-            this.billingControl.BackColor = System.Drawing.Color.White;
-            this.billingControl.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.billingControl.Location = new System.Drawing.Point(242, 80);
-            this.billingControl.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.billingControl.Name = "billingControl";
-            this.billingControl.Size = new System.Drawing.Size(1129, 672);
-            this.billingControl.TabIndex = 2;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(1)))), ((int)(((byte)(116)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Image = global::the_billing_concept.Properties.Resources.Reset_48px1;
+            this.button1.Location = new System.Drawing.Point(124, 19);
+            this.button1.Name = "button1";
+            this.button1.Padding = new System.Windows.Forms.Padding(500);
+            this.button1.Size = new System.Drawing.Size(90, 78);
+            this.button1.TabIndex = 1;
+            this.button1.Text = " ";
+            this.button1.UseVisualStyleBackColor = false;
             // 
-            // priceCheck
+            // print_last
             // 
-            this.priceCheck.BackColor = System.Drawing.Color.White;
-            this.priceCheck.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.priceCheck.Location = new System.Drawing.Point(0, 0);
-            this.priceCheck.Margin = new System.Windows.Forms.Padding(4);
-            this.priceCheck.Name = "priceCheck";
-            this.priceCheck.Size = new System.Drawing.Size(1370, 749);
-            this.priceCheck.TabIndex = 1;
+            this.print_last.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(1)))), ((int)(((byte)(116)))));
+            this.print_last.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.print_last.Image = global::the_billing_concept.Properties.Resources.Print_64p222x;
+            this.print_last.Location = new System.Drawing.Point(28, 19);
+            this.print_last.Name = "print_last";
+            this.print_last.Padding = new System.Windows.Forms.Padding(500);
+            this.print_last.Size = new System.Drawing.Size(90, 78);
+            this.print_last.TabIndex = 0;
+            this.print_last.Text = " ";
+            this.print_last.UseVisualStyleBackColor = false;
+            // 
+            // billing_btn
+            // 
+            this.billing_btn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(61)))), ((int)(((byte)(126)))));
+            this.billing_btn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.billing_btn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(61)))), ((int)(((byte)(126)))));
+            this.billing_btn.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.billing_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.billing_btn.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.billing_btn.ForeColor = System.Drawing.Color.White;
+            this.billing_btn.Image = global::the_billing_concept.Properties.Resources.Bill_32px;
+            this.billing_btn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.billing_btn.Location = new System.Drawing.Point(6, 204);
+            this.billing_btn.Margin = new System.Windows.Forms.Padding(4);
+            this.billing_btn.Name = "billing_btn";
+            this.billing_btn.Size = new System.Drawing.Size(234, 86);
+            this.billing_btn.TabIndex = 2;
+            this.billing_btn.Text = "Billing";
+            this.billing_btn.UseVisualStyleBackColor = false;
+            this.billing_btn.Click += new System.EventHandler(this.billing_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::the_billing_concept.Properties.Resources.social_1_logo_buysellads_2x;
+            this.pictureBox1.Location = new System.Drawing.Point(76, 43);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(93, 99);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // priceCheck1
+            // 
+            this.priceCheck1.BackColor = System.Drawing.Color.White;
+            this.priceCheck1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.priceCheck1.Location = new System.Drawing.Point(0, 0);
+            this.priceCheck1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.priceCheck1.Name = "priceCheck1";
+            this.priceCheck1.Size = new System.Drawing.Size(1370, 749);
+            this.priceCheck1.TabIndex = 3;
             // 
             // BillingHome
             // 
@@ -250,7 +292,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.billingControl);
-            this.Controls.Add(this.priceCheck);
+            this.Controls.Add(this.priceCheck1);
             this.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -261,10 +303,11 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -288,7 +331,10 @@
         private System.Windows.Forms.Label dateTime;
         private System.Windows.Forms.Panel sliding_panel;
         private BillingControl billingControl;
-        private PriceCheck priceCheck;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button print_last;
+        private System.Windows.Forms.Button button1;
+        private PriceCheck priceCheck1;
     }
 }
 

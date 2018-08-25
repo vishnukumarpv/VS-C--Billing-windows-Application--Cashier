@@ -48,7 +48,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1129, 672);
+            this.panel1.Size = new System.Drawing.Size(911, 554);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -56,7 +56,7 @@
             this.panel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.panel2.Controls.Add(this.item_name);
             this.panel2.Controls.Add(this.item_price);
-            this.panel2.Location = new System.Drawing.Point(260, 285);
+            this.panel2.Location = new System.Drawing.Point(123, 225);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(679, 229);
             this.panel2.TabIndex = 9;
@@ -92,7 +92,7 @@
             this.price_find_btn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.price_find_btn.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.price_find_btn.ForeColor = System.Drawing.Color.White;
-            this.price_find_btn.Location = new System.Drawing.Point(469, 190);
+            this.price_find_btn.Location = new System.Drawing.Point(332, 130);
             this.price_find_btn.Name = "price_find_btn";
             this.price_find_btn.Size = new System.Drawing.Size(186, 69);
             this.price_find_btn.TabIndex = 8;
@@ -103,7 +103,7 @@
             // item_textbox
             // 
             this.item_textbox.Font = new System.Drawing.Font("Century Gothic", 18.25F);
-            this.item_textbox.Location = new System.Drawing.Point(272, 140);
+            this.item_textbox.Location = new System.Drawing.Point(135, 80);
             this.item_textbox.Name = "item_textbox";
             this.item_textbox.Size = new System.Drawing.Size(597, 37);
             this.item_textbox.TabIndex = 4;
@@ -112,7 +112,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F);
-            this.label2.Location = new System.Drawing.Point(268, 117);
+            this.label2.Location = new System.Drawing.Point(131, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(177, 22);
             this.label2.TabIndex = 3;
@@ -125,7 +125,7 @@
             this.BackColor = System.Drawing.Color.White;
             this.Controls.Add(this.panel1);
             this.Name = "PriceCheck";
-            this.Size = new System.Drawing.Size(1129, 672);
+            this.Size = new System.Drawing.Size(911, 554);
             this.Load += new System.EventHandler(this.PriceCheck_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

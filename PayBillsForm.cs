@@ -36,6 +36,8 @@ namespace the_billing_concept
             //(sender as PayBillControl)._total = this.total_amount; 
             payBillControl1._total = this.total_amount;
             payBillControl1.setTotal();
+            payBillControl1.setForm(this);
+
         }
     }
 }

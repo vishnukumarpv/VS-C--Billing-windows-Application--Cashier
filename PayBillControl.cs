@@ -12,14 +12,23 @@ namespace the_billing_concept
         private decimal user_inp = 0.0m;
         private decimal user_atm = 0.0m;
         private decimal bal = 0.0m;
+        private string currency = Properties.Settings.Default["currency"].ToString();
+
+        public Form payForm;
+
+        public void setForm(Form form)
+        {
+            this.payForm = form; 
+        }
 
         public PayBillControl()
         {
             InitializeComponent();
             defa_textbox = amount_cash;
 
-
         }
+
+        
         private void eTextBox(object sender, EventArgs e)
         {
             if (focussed_tbox != (sender as TextBox))
@@ -32,7 +41,7 @@ namespace the_billing_concept
         }
         public void setTotal()
         {
-            total_show.Text = _total.ToString();
+            total_show.Text = currency + _total.ToString();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -42,7 +51,7 @@ namespace the_billing_concept
 
         private void close_Click(object sender, EventArgs e)
         {
-             
+            this.payForm.Close();
         }
 
         private void isDigit(object sender, KeyPressEventArgs e)
@@ -74,7 +83,7 @@ namespace the_billing_concept
             //MessageBox.Show("entered" + Decimal.Parse(inpu));
             user_inp =  Decimal.Parse(inpu);
             bal = _total - (user_inp + user_atm);
-            bal_cash.Text = bal.ToString();
+            bal_label.Text = bal.ToString();
         }
 
         private void cashViaAtmTextChange(object sender, EventArgs e)
@@ -82,16 +91,21 @@ namespace the_billing_concept
             string inpu = (sender as TextBox).Text;
             user_atm = Decimal.Parse(inpu);
             bal = _total - (user_inp + user_atm);
-            bal_cash.Text = bal.ToString();
+            bal_label.Text = bal.ToString();
         }
 
         private void save_button_Click(object sender, EventArgs e)
         {
             if(this.bal < 0)
             {
-                MessageBox.Show("Cant save pay the full amount");
+                MessageBox.Show("Cant save. pay the full amount");
                 return;
             }
+        }
+
+        private void cancel_Click(object sender, EventArgs e)
+        {
+             
         }
 
         private void numberPad(object sender, EventArgs e)

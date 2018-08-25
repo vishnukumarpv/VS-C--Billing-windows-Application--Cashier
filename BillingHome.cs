@@ -49,7 +49,8 @@ namespace the_billing_concept
             sliding_panel.Top = price_check_btn.Top;
 
             //BillingHome.BillingControl.BringToFront();
-            priceCheck.BringToFront();
+            priceCheck1.BringToFront();
+            priceCheck1.Dock = DockStyle.Left;
             
         }
 
