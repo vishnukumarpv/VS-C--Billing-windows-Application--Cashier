@@ -16,6 +16,7 @@ namespace the_billing_concept
         public BillingHome()
         {
             InitializeComponent();
+            timeanddate.Start();
 
             sliding_panel.Top = billing_btn.Top;
             sliding_panel.Height = billing_btn.Height;
@@ -54,6 +55,10 @@ namespace the_billing_concept
             
         }
 
- 
+        private void timeanddate_Tick(object sender, EventArgs e)
+        { 
+            DateTime dt = DateTime.Now;
+            dateTimeLabel.Text = dt.ToString("F");
+        }
     }
 }

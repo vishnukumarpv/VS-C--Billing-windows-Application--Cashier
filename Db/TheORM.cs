@@ -205,7 +205,7 @@ namespace the_billing_concept.Db
 
                 int result = this.db.nQuery(sql, this.internProperties.ToArray());
 
-                last_id = db.getLastId();
+                last_id = this.db.getLastId();
 
                 Console.WriteLine("inner " + last_id);
 
@@ -214,7 +214,7 @@ namespace the_billing_concept.Db
 
                 
 
-                return result;
+                return last_id;
             }
             else
             {

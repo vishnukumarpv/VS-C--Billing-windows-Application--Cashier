@@ -14,6 +14,10 @@ namespace the_billing_concept
     {
         private decimal total_amount;
 
+        public decimal bill_total { get; set; }
+
+        public DataGridView bills_datagrid { get; set; }
+
         public decimal _total { get { return total_amount; } }
 
         public PayBillsForm(decimal total_a)
@@ -32,11 +36,13 @@ namespace the_billing_concept
         private void payBillControl1_Load(object sender, EventArgs e)
         {
              
-            Console.WriteLine( sender.GetType());
+            Console.WriteLine("grisdddddd :"+bills_datagrid);
             //(sender as PayBillControl)._total = this.total_amount; 
             payBillControl1._total = this.total_amount;
             payBillControl1.setTotal();
             payBillControl1.setForm(this);
+            payBillControl1.bill_total = this.bill_total;
+            payBillControl1.bills_datagrid = this.bills_datagrid;
 
         }
     }

@@ -17,6 +17,7 @@ namespace the_billing_concept
         public bool billed { get; set; }
         private int items_count = 0;
         private string currency_ind = "$";
+        public bool billing_completed { get; set; }
 
         private List<BillItemsData> _items;
 
@@ -123,54 +124,6 @@ namespace the_billing_concept
         }
 
 
-        private void processBilling(object sender, EventArgs e)
-        {
-            int bill_id;
-            if (this.bill_total == 0 )
-            {
-                MessageBox.Show("Bill something");
-                return;
-            }
-            PayBillsForm py = new PayBillsForm(this.bill_total);
-            py.ShowDialog();
-            return;
-
-             
-
-            the_billing_concept.Models.Billing bill;
-            the_billing_concept.Models.BillItems bill_items;
-
-            bill = new the_billing_concept.Models.Billing();
-
-            bill._total = bill_total; 
-            bill_id = bill.create();
-
-            DataGridViewRowCollection bills;
-            bills = bills_datagrid.Rows;
-
-            Console.WriteLine("b : "+bills);
-
-            List<object> items = new List<object>();
-
-            bill_items = new Models.BillItems();
-             
-            for (int i=0; i < bills.Count - 1; i++)
-            { 
-                bill_items = new Models.BillItems();
-                bill_items._bill_id = bill_id;
-                bill_items._item_id = (int)bills[i].Cells[1].Value; 
-                bill_items._qty = (int)bills[i].Cells[3].Value;
-                bill_items._price = (decimal)bills[i].Cells[6].Value;
-
-                items.Add(bill_items); 
-            }
-
-            bill_items.create(items);
-             
-
-
-        }
-
         private void resetAll()
         {
             
@@ -235,6 +188,39 @@ namespace the_billing_concept
             }
 
         }
+
+        public void billCompleated()
+        {
+            total_show.Text = "done";
+        }
+
+
+        private void processBilling(object sender, EventArgs e)
+        {
+            if (this.bill_total == 0)
+            {
+                MessageBox.Show("Bill something");
+                return;
+            }
+            PayBillsForm py = new PayBillsForm(this.bill_total);
+            py.bills_datagrid = this.bills_datagrid;
+            
+            py.ShowDialog();
+            return;
+
+
+
+
+
+
+
+        }
+
+        /*protected override AccessibleObject CreateAccessibilityInstance()
+        {
+             return new PayBillControl(this);
+        }
+        */
     }
 
 }
